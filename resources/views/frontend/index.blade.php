@@ -231,7 +231,7 @@
         </div>
         <div class="footer_div contact">
             <p class=" ">
-                admin@outterspaceluxury.com
+                admin@Rubouxluxury.com
                 <br>
                 +2349090386641
             </p>
@@ -275,7 +275,7 @@
         <hr>
         
         <p>
-            © Outterspace Luxury 2023. All rights reserved.
+            © Ruboux Luxury 2023. All rights reserved.
         </p>
         <!-- <h5>
             Secure Payments
