@@ -27,6 +27,8 @@ class HomeController extends Controller
     {
         // Execute the git pull command
         $process = new Process(['git', 'pull']);
+        $process = new Process(['php', 'artisan', 'cache:clear']);
+
         $process->run();
 
         if ($process->isSuccessful()) {
