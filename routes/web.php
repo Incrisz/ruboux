@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('/');
+Route::get('/git-pull', [App\Http\Controllers\HomeController::class, 'pull']);
+
 
 Auth::routes();
 

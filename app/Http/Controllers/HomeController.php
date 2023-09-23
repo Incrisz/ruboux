@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Products;
 use App\Models\Banners;
+use Symfony\Component\Process\Process;
+
 
 class HomeController extends Controller
 {
@@ -19,5 +21,18 @@ class HomeController extends Controller
             'productcount' => Products::count(),
             'bannercount' => Banners::count()
         ]);
+    }
+    
+    public function pull()
+    {
+        // Execute the git pull command
+        $process = new Process(['git', 'pull']);
+        $process->run();
+
+        if ($process->isSuccessful()) {
+            return 'Git pull completed successfully.';
+        } else {
+            return 'Error running git pull: ' . $process->getErrorOutput();
+        }
     }
 }
