@@ -1,0 +1,10 @@
+[22-Sep-2023 22:52:47 America/New_York] PHP Warning:  require(/home/ashpxkrk/ruboux.com/store/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/ashpxkrk/ruboux.com/store/index.php on line 34
+[22-Sep-2023 22:52:47 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ashpxkrk/ruboux.com/store/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/ashpxkrk/ruboux.com/store/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/ashpxkrk/ruboux.com/store/index.php on line 34
+[22-Sep-2023 22:53:04 America/New_York] PHP Warning:  require(/home/ashpxkrk/ruboux.com/store/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/ashpxkrk/ruboux.com/store/index.php on line 34
+[22-Sep-2023 22:53:04 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ashpxkrk/ruboux.com/store/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/ashpxkrk/ruboux.com/store/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/ashpxkrk/ruboux.com/store/index.php on line 34

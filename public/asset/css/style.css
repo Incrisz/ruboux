@@ -1,0 +1,950 @@
+body{
+  background-color: black;
+}
+.main{
+  background-color: white;
+}
+
+/* Apply styles to the .hero container */
+.hero {
+    position: relative; /* Set position to relative */
+}
+
+
+/* Base styles for header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    color: white; /* Text color for links */
+    position: relative; /* Set position to relative */
+    z-index: 2; /* Higher z-index than the hero image */
+    background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+}
+
+/* Style for the hero image, make it fit the screen */
+.hero-img {
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Lower z-index than the header */
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.hamburger-menu{
+  flex: 0 0 calc(40% - 10px); /* Each section takes about 30% width with some spacing */
+}
+.logo,
+.nav,
+.icons{
+  flex: 0 0 calc(30% - 10px); /* Each section takes about 30% width with some spacing */
+}
+
+/* Style the navigation */
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.hamburger-menu ul li {
+    margin-right: 15px; /* Adjust spacing between navigation items */
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    color: rgb(32, 32, 32); /* Link text color */
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+}
+
+.hamburger-menu .home{
+  text-decoration: underline;
+}
+
+.hamburger-menu input{
+  display: none;
+}
+
+#menuToggle{
+    display: block;
+}
+
+
+/* Style the logo */
+.logo {
+    text-align: center;
+
+    flex: 1; /* Takes remaining space */
+    max-width: 20%; /* Set maximum width to 10% of the viewport width */
+    margin: 0 auto; /* Center the logo horizontally */
+    justify-content: center; /* Center horizontally */
+}
+
+.logo_img{
+    max-width: 100%; /* Set maximum width to 100% of the viewport width */
+    margin-left: -50px; /* Adjust the margin-left value as needed */
+
+}
+
+/* Style the navigation icons */
+.nav.icons {
+    display: flex;
+    justify-content: space-between; /* To space the icons evenly */
+    align-items: center; /* Vertically center the icons */
+}
+
+/* Add margin to each individual icon */
+.nav.icons i {
+  margin-left: 20px;
+  color: rgb(89, 88, 88);
+}
+
+
+/* Styling for the clothing section */
+.clothe_section {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0; /* Remove top margin for h3 */
+  font-size: xx-large;
+}
+
+.shop_all {
+  text-decoration: none;
+  color: rgb(76, 75, 75); /* Grey text color */
+  transition: border-bottom 0.5s ease; /* Add a smooth transition effect */
+}
+
+.shop_all:hover {
+  animation: removeUnderline 0.1s forwards, addUnderline 0.1s 0.4s forwards;
+}
+
+@keyframes removeUnderline {
+  to {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+@keyframes addUnderline {
+  to {
+    border-bottom: 1px solid grey;
+  }
+}
+
+.clothes {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items onto a new line when necessary */
+  justify-content: space-around; /* Distribute items evenly horizontally */
+}
+
+.clothes > div {
+  width: calc(50% - 20px); /* 50% width with some spacing between items */
+  margin: 10px; /* Add spacing between items */
+  text-align: center;
+}
+
+.apparel{
+  max-width: 20%; /* Set maximum width to 10% of the viewport width */
+  position: relative;
+  display: inline-block;
+}
+
+.apparel .prod_details h4,
+.apparel .prod_details p {
+  
+  text-align: left;
+}
+
+.buy {
+  text-decoration: none;
+  color: rgb(76, 75, 75); /* Grey text color */
+  transition: border-bottom 0.5s ease; /* Add a smooth transition effect */
+}
+
+.prod_price, .buy{
+  text-decoration: none;
+  margin: 0 10px; /* Add some spacing between the sections */
+}
+
+.apparel_image{
+  max-width: 100%; /* Set maximum width to 100% of the viewport width */
+}
+
+.overlay_image {
+  position: absolute; /* Set the overlay image to absolute positioning */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Initially hide the overlay image */
+  transition: opacity 0.3s ease; /* Add a smooth transition for opacity */
+  max-width: 100%; /* Set maximum width to 100% of the viewport width */
+}
+
+.apparel:hover .overlay_image {
+  opacity: 1; /* Show the overlay image on hover */
+}
+
+.apparel .prod_details{
+  position: relative;
+}
+
+/* Hide .hover_link by default */
+.apparel .prod_details .hover_link {
+  opacity: 1;
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(-50%, -50%); /* Center the .hover_link */
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Horizontal spacing between links */
+  align-items: center; /* Vertically center the links */
+  transition: opacity 0.3s; /* Add transitions for smooth animation */
+  
+}
+
+/* Style the links inside .hover_link */
+.apparel .prod_details .hover_link a {
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: small; /* Adjust font size */
+  padding: 5px; /* Add padding to the links */
+  list-style: none;
+  
+}
+
+.apparel .prod_details .hover_link li{
+  text-align: left;
+  list-style: none;
+}
+
+.slider_div {
+  align-items: center;
+  display: flex;
+  
+  width: 100%; /* Full width of the container */
+  height: 450px; /* Set a maximum height for the slider div */
+}
+
+.slider_1 {
+  margin-left: 30px;
+  width: 45%; /* 45% width for the first div */
+  padding: 20px; /* Add padding for content spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  height: 450px;
+  background-color: rgb(247, 196, 199);
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Vertically center child elements */
+}
+
+.first_slide{
+  margin-left: 60px;
+  width: 45%; /* 45% width for the first div */
+  padding: 20px; /* Add padding for content spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  height: 450px;
+  background-color: red;
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Vertically center child elements */
+}
+
+
+.first_slide h1.slider_text{
+  font-size: 50px; /* You can adjust this value to set the desired font size */
+}
+
+.first_slide p.slider_text{
+  font-size: 18px; /* You can adjust this value to set the desired font size */
+  line-height: 1.5; /* You can adjust this value to increase or decrease the line spacing */
+}
+
+
+.third_slide{
+  margin-left: 60px;
+  width: 45%; /* 45% width for the first div */
+  padding: 20px; /* Add padding for content spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  height: 450px;
+  background-color: rgb(227, 227, 227);
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Vertically center child elements */
+}
+
+
+.fourth_slide{
+  margin-left: 60px;
+  width: 45%; /* 45% width for the first div */
+  padding: 20px; /* Add padding for content spacing */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  height: 450px;
+  background-color: rgb(39, 38, 38);
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: center; /* Vertically center child elements */
+}
+
+.fourth_slide .shop_now{
+  margin-top: 20%;
+  width: 30%;
+  background-color: transparent; /* Make the background transparent */
+  border: 1px solid rgb(255, 255, 255); /* Add a black border */
+  border-radius: 3px; /* Add a small border radius */
+  padding: 10px 20px; /* Adjust padding as needed */
+  color: rgb(255, 255, 255); /* Set the text color to black */
+  cursor: pointer; /* Add a pointer cursor for interaction */
+}
+
+.slider_2 {
+  width: 45%; /* 45% width for the second div */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  height: 450px;
+  background-image: url('../img/slider2.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire div with the image, cropping as needed */
+  background-position: center; /* Center the image within the div */
+}
+  
+.container {
+	padding: 0rem;
+  height: 100%;
+}
+
+.slider-wrapper {
+  width: 600px;
+  height: 450px;
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+  height: 450px;
+	display: flex;
+  max-width: 100%;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 450px;
+	scroll-snap-align: start;
+  object-fit: cover;
+	
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.slider_img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider_text{
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+  font-weight: 300; /* Use the thin variant of the font */
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+
+h1.slider_text{
+  font-size: 80px; /* You can adjust this value to set the desired font size */
+}
+
+p.slider_text{
+  font-size: 18px; /* You can adjust this value to set the desired font size */
+  line-height: 1.5; /* You can adjust this value to increase or decrease the line spacing */
+}
+
+.shop_now{
+  margin-top: 30px;
+  width: 30%;
+  background-color: transparent; /* Make the background transparent */
+  border: 1px solid black; /* Add a black border */
+  border-radius: 3px; /* Add a small border radius */
+  padding: 10px 20px; /* Adjust padding as needed */
+  color: black; /* Set the text color to black */
+  cursor: pointer; /* Add a pointer cursor for interaction */
+}
+
+.gallery {
+  
+  justify-content: center; /* Center the content horizontally */  
+}
+
+.promo-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.promo, .new-arrivals {
+  margin: 0 10px; /* Add some spacing between the sections */
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  
+}
+
+.promo p, .new-arrivals p{
+  font-weight: 200; /* Set font weight to bold (700) */
+  color: rgb(89, 88, 88);
+}
+
+
+/*
+
+#gallery1.div{
+  width: 100%;
+  height: 100%;
+}
+
+#gallery1{
+  width: 100%;
+  height: 80vh;
+}
+
+*/
+
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+  justify-content: space-between; /* Space between the sections */
+}
+
+.gallery-section {
+  flex: 0 0 calc(30% - 10px); /* Each section takes about 30% width with some spacing */
+  margin: 5px; /* Add spacing between sections */
+  max-width: calc(30% - 10px); /* Set max width to prevent sections from stretching */
+  text-align: center; /* Center content horizontally */
+}
+
+.full-width {
+  flex: 0 0 100%; /* The first section takes 100% width */
+  max-width: 100%; /* Set max width to prevent sections from stretching */
+}
+
+.gallery-image {
+  max-width: 100%; /* Make images responsive within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.gallery-section2 {
+  flex: 0 0 calc(49% - 10px); /* Each section takes about 30% width with some spacing */
+  margin: 5px; /* Add spacing between sections */
+  max-width: calc(49% - 10px); /* Set max width to prevent sections from stretching */
+  text-align: center; /* Center content horizontally */
+  margin-top: 100px;
+}
+
+.gallery-image2 {
+  max-width: 100%; /* Make images responsive within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.gallery_desc {
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  font-weight: 900; /* Set font weight to bold (700) */
+  font-size: xx-large;
+  color: rgb(89, 88, 88);
+  text-decoration: none;
+}
+
+.info_container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
+  justify-content: space-between; /* Space between the sections */
+  width: 97%;
+}
+
+.info_container p {
+    font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+    font-weight: 300; /* Use the thin variant of the font */
+    line-height: 1.5; /* You can adjust this value to increase or decrease the line spacing */
+    color: grey; /* Set the text color to grey */
+}
+
+.info_container h2,
+.info_container a {
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+  font-weight: 9000; /* Use the thin variant of the font */
+  line-height: 1.5; /* You can adjust this value to increase or decrease the line spacing */
+  color: rgb(47, 46, 46);
+}
+
+.icon{
+   color: grey; 
+}
+
+.container {
+  flex: 0 0 calc(30% - 10px); /* Each section takes about 30% width with some spacing */
+  margin: 5px; /* Add spacing between sections */
+  max-width: calc(30% - 10px); /* Set max width to prevent sections from stretching */
+  text-align: left; /* Center content horizontally */
+}
+
+.gift_card {
+  display: flex;
+  justify-content: space-between; /* Distribute space between icon and details */
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 0px;
+  background-color: rgb(241, 238, 238);
+}
+
+.giftcard_icon {
+  width: 100%; /* 30% width for the icon */
+  margin-right: 20px;
+}
+
+.giftcard_details {
+  width: 20%; /* 40% width for the details */
+}
+
+.custom-icon{
+  width: 5%;
+}
+
+
+.delivery-icon{
+  width: 100%;
+}
+
+.pre_footer{
+  margin-top: 100px;
+}
+
+.mail_list {
+  margin-top: 50px;
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within the div */
+}
+
+.mail_list h1{
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  font-weight: 900; /* Set font weight to bold (700) */
+  color: rgb(89, 88, 88);
+}
+
+.mail_list p{
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+  font-weight: 300; /* Use the thin variant of the font */
+  color: rgb(89, 88, 88);
+  margin-bottom: 50px;
+}
+
+.social_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social_container i{
+  margin: 20px;
+  color: rgb(89, 88, 88);
+}
+
+.socials{
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  font-weight: 900; /* Set font weight to bold (700) */
+  color: rgb(89, 88, 88);
+}
+
+
+form {
+  display: flex; /* Use flexbox to control layout */
+  align-items: center; /* Center items vertically */
+  border: 1px solid #ccc; /* Add a border around the form */
+  margin-bottom: 50px;
+  width: 45%;
+}
+
+input[type="text"] {
+  flex-grow: 1; /* Allow the input field to grow and take available space */
+  padding: 5px; /* Padding for the input field */
+  border: none; /* Remove border from the input field */
+  border-radius: 5px 0 0 5px; /* Border radius for rounded corners on the left side */
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+  font-weight: 300; /* Use the thin variant of the font */
+  font-size:small
+}
+
+input[type="submit"] {
+  padding: 5px 10px; /* Padding for the submit button */
+  color: rgb(61, 61, 61); /* Text color for the button */
+  border: none; /* Remove border from the button */
+  border-radius: 0 5px 5px 0; /* Border radius for rounded corners on the right side */
+  cursor: pointer; /* Change cursor on hover */
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+  font-weight: 300; /* Use the thin variant of the font */
+  font-size: large;
+}
+
+input[type="submit"]:hover{
+  color: white;
+}
+
+
+.footer {
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 60px 0;
+  
+}
+
+.footer_div {
+  flex-basis: 19%;
+  text-align: left;
+  margin-left: 60px;
+  
+}
+
+.footer p,
+.footer a,
+
+.footer li,
+.payments i,
+.payments p{
+  color: rgb(163, 163, 163);
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+}
+.footer h4,
+.payments h5{
+  color: rgb(241, 241, 241);
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto Condensed', sans-serif; /* Use the selected font */
+}
+
+hr{
+  width: 100%; 
+  height: px;
+  margin: 0 auto;
+  color: rgb(186, 186, 186);
+}
+
+.payments{
+  background-color: rgb(22, 22, 22);
+  padding-bottom: 90px;
+  padding: 40px;
+}
+
+.payment_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  margin-left: 50%;
+  
+}
+
+.visa,
+.paypal,
+.mastercard,
+.gpay,
+.applepay,
+.amex{
+  flex-basis: 10%;
+  text-align: left;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row; /* Stack elements vertically on smaller screens */
+        text-align: left; /* Center-align text on smaller screens */
+    }
+
+    #menu__toggle {
+      opacity: 0;
+    }
+    #menu__toggle:checked + .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      left: 0 !important;
+    }
+    .menu__btn {
+      margin-top: 15px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #000000;
+      transition-duration: .25s;
+    }
+
+    
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+
+    .hamburger-menu{
+      flex: 0 0 calc(15% - 10px); /* Each section takes about 30% width with some spacing */
+    }
+    .logo,
+    .nav,
+    .icons{
+      flex: 0 0 calc(30% - 10px); /* Each section takes about 30% width with some spacing */
+    }
+
+    .hamburger-menu ul{
+      display: block;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 300px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      list-style: none;
+      background-color: #ECEFF1;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+      transition-duration: .25s;
+    }
+ 
+    .hamburger-menu a {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: .25s;
+  }
+    .menu__item:hover {
+      background-color: #CFD8DC;
+    }
+
+
+    .logo {
+      text-align: center;
+  
+      flex: 1; /* Takes remaining space */
+      max-width: 40%; /* Set maximum width to 10% of the viewport width */
+      margin: 0 auto; /* Center the logo horizontally */
+      justify-content: center; /* Center horizontally */
+  }
+
+
+    .logo_img{
+      max-width: 100%; /* Set maximum width to 100% of the viewport width */
+      height: auto;
+      margin-left: 20px; /* Adjust the margin-left value as needed */
+  
+  }
+
+    .clothes > div {
+      width: calc(50% - 10px); /* Reduce width to fit 2 items per row */
+    }
+
+    .apparel{
+      max-width: 40%; /* Set maximum width to 10% of the viewport width */
+    }
+    
+    .apparel_image{
+      max-width: 100%; /* Set maximum width to 100% of the viewport width */
+    }
+
+
+    .slider_div {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .slider_1,
+    .slider_2 {
+      width: 100%; /* Make both divs occupy full width on small screens */
+      max-width: 100%; /* Limit maximum width to prevent overflow on large screens */
+      margin: 0;
+    }
+
+.slider-wrapper {
+  width: 100%;
+  height: 450px;
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+    
+    h1.slider_text {
+      font-size: 40px;
+    }
+  
+    p.slider_text {
+      font-size: 16px;
+    }
+  
+    .shop_now {
+      width: 60%;
+    }
+
+
+    .gallery-section {
+      flex: 0 0 calc(100% - 10px); /* Each section takes 100% width on smaller screens */
+      max-width: calc(100% - 10px);
+  }
+
+  .gallery-section2 {
+    flex: 0 0 calc(100% - 10px); /* Each section takes 100% width on smaller screens */
+    max-width: calc(100% - 10px);
+}
+
+  .container {
+    flex: 0 0 calc(100% - 10px); /* Each section takes 100% width on smaller screens */
+    max-width: calc(100% - 10px);
+}
+
+
+.gift_card {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  padding-left: 20px;
+  margin-left: 0px;
+}
+
+
+
+.giftcard_icon {
+  width: 30%; /* 30% width for the icon */
+  margin-right: 20px;
+}
+
+.giftcard_details {
+  width: 20%; /* 40% width for the details */
+}
+
+
+
+  .footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .footer_div {
+    flex-basis: 100%;
+    margin-left: 40px;
+  }
+
+
+  hr{
+    width: 100%; 
+    height: px;
+    margin: 0 auto;
+    color: rgb(186, 186, 186);
+  }
+  
+  .payments{
+    background-color: rgb(22, 22, 22);
+    padding-bottom: 90px;
+    padding: 40px;
+  }
+  
+  .payment_container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .visa,
+  .paypal,
+  .mastercard,
+  .gpay,
+  .applepay,
+  .amex{
+    flex-basis: 9%;
+  }
+
+  .visa img,
+  .paypal img,
+  .mastercard img,
+  .gpay img,
+  .applepay img,
+  .amex img{
+    width: 100%;  
+  }
+    }
